@@ -1,24 +1,47 @@
-# Kickstarter Campaign Project [Machine Learning]
-![](https://banner2.cleanpng.com/20180606/uor/kisspng-kickstarter-crowdfunding-fundraising-project-kickstart-5b17fedb06a746.9602418315282992270273.jpg)
+# ds-modeling-pipeline
+Skeleton project for building a simple model in python script
+This is the simplest way to do it. We train a simple model in the jupyter notebook, where we select only some features and do minimal cleaning. The output is then stored in simple python scripts.
 
-#### -- Project Status: [Complete]
+Data used is the  [coffee quality dataset](https://github.com/jldbc/coffee-quality-database).
 
-## Project Description
-Kickstarter is a US based global crowd funding platform focused on bringing funding to creative projects. Since the platform’s launch in 2009, the site has hosted over 159,000 successfully funded projects with over 15 million unique backers. Kickstarter uses an “all-or-nothing” funding system. This means that funds are only dispersed for projects that meet the original funding goal set by the creator.
+##
+Requirements:
+- pyenv with Python: 3.8.5
 
-Kickstarter earns 5% commission on projects that are successfully funded. Currently, less than 40% of projects on the platform succeed. The objective is to predict which projects are likely to succeed so that these projects can be highlighted on the site either through 'staff picks' or 'featured product' lists.
+### Environment
 
+Same procedure as last time...
 
-### Methods Used
-* Data Visualization
-* Machine learning Predictive Modeling
+Use the requirements file in this repo to create a new environment.
 
-### Technologies
-* Python
-* Pandas, jupyter
+```BASH
+make setup 
 
-## Project Objective
-* Predict Successful Campaigns and find out if our stakeholder's project will be successful or not.
+#or 
 
-How its done?
-- I have done it in all in one notebook - MainNotebook.ipynb
+pyenv local 3.8.5
+python -m venv .venv
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## Usage
+
+In order to train the model and store test data in the data folder and the model in models run:
+
+```bash
+#activate env
+source .venv/bin/activate
+
+python train.py  
+```
+
+In order to test that predict works on a test set you created run:
+
+```bash
+python predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
+```
+
+## Limitations
+
+development libraries are part of the production environment, normally these would be separate as the production code should be as slim as possible
