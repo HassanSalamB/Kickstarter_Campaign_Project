@@ -19,3 +19,6 @@ Kickstarter earns 5% commission on projects that are successfully funded. Curren
 
 ## Project Objective
 * Predict Successful Campaigns and find out if our stakeholder's project will be successful or not.
+
+How its done?
+- I have done it in all in one notebook - MainNotebook.ipynb
